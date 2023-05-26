@@ -1,21 +1,21 @@
 #include "monty.h"
-
 /**
- * f_pall - Prints all elements of the stack.
- * @head: Stack head.
- * @counter: Line number (not used).
- * Return: No return value.
- */
+ * f_pall - prints the stack
+ * @head: stack head
+ * @counter: no used
+ * Return: no return
+*/
 void f_pall(stack_t **head, unsigned int counter)
 {
-	stack_t *current;
-	(void) counter;
+	stack_t *h;
+	(void)counter;
 
-	current = *head;
-	while (current != NULL)
+	h = *head;
+	if (h == NULL)
+		return;
+	while (h)
 	{
-		printf("%d\n", current->n);
-		current = current->next;
+		printf("%d\n", h->n);
+		h = h->next;
 	}
 }
-
